@@ -2,10 +2,17 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
 body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  text-align: center;
+  background-color: #f0f0f0;
 }
 
 h1 {
@@ -46,6 +53,26 @@ ul {
   padding-inline-start: 20px;
 }
 
+button {
+  background-color: #515158;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:not(.square):not(:disabled):hover {
+  background-color: #1010a8;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -59,18 +86,20 @@ body {
 .square {
   background: #fff;
   border: 1px solid #999;
+  color: black;
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
-  min-width: 34px;
+  flex: 1 1 auto;
+  aspect-ratio: 1;
+  min-width: 40px;
 }
+
+.square.clicked:hover {
+  cursor: default;
+} 
 
 .emphasis {
   color: #d00;
@@ -84,23 +113,51 @@ body {
 
 .board-row {
   display: flex;
+  flex: 1 1 auto;
 }
 .game-board {
   padding: 1%;
   overflow: auto;
   display: inline-block;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .status {
   margin-bottom: 10px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 .game {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#left-panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-style: italic;
+  margin-top: -5px;
+  height: 70px;
 }
 
 .game-info {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-grow: 1 1 auto;
 }
 #history-list {
   list-style-type: square;
@@ -110,7 +167,7 @@ body {
   padding: 5px 10px;
   border: #999 1px solid;
 }
-.status {
-  justify-content: space-between;
-  display: flex;
+#history-list button {
+  width: 100%;
+  margin-bottom: 2px;
 }

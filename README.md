@@ -3,7 +3,7 @@
 
 Simple Tic-Tac-Toe game, I wrote in order to learn the basics of React. Modificated version of an [official React tutorial](https://react.dev/learn/tutorial-tic-tac-toe).
 
-## Features:
+## Features
 
 * Better history navigation
   * Going back in history might be undone (or moves redone), it doesn't delete immediately later history, only if you move something else
@@ -15,4 +15,4 @@ Simple Tic-Tac-Toe game, I wrote in order to learn the basics of React. Modifica
 
 ## Screenshots
 
-![alt text](image.png)
+![screenshot of game look](image.png)
