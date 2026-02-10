@@ -169,7 +169,6 @@ export default function GameApp() {
     const win = calculateWinner(newSquares, boardSize, goalLengths[boardSize - 2]);
     if (win) {
       setWinner(win);
-      alert(`Player ${win.player} wins!`);
       setUiPhase("gameover");
     }
   }

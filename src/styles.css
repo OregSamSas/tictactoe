@@ -64,6 +64,10 @@ button {
   transition: background-color 0.3s ease;
 }
 
+button:not(.square) {
+  margin: 0 2px;
+}
+
 button:not(.square):not(:disabled):hover {
   background-color: #1010a8;
 }
